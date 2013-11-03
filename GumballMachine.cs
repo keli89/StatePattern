@@ -11,7 +11,7 @@
         private const string NoGumballMessage = "NoGumballMessage";
         private const string DispenseSucessMessage = "DispenseSucessMessage";
         private const string EjectSucessMessage = "EjectSucessMessage";
-        public int GumballNum { get; private set; }
+        public int GumballNum { get;set; }
 
         public GumballMachine(int gumballNum, MachineStatus machineStatus)
         {
@@ -19,65 +19,26 @@
             State = machineStatus;
         }
 
-        public MachineStatus State { get; private set; }
+        public MachineStatus State { get;set; }
 
         public string InsertQuarter()
         {
-            if (State == MachineStatus.SOLD)
-                return SoldMessage;
-            if (State == MachineStatus.SOLD_OUT)
-                return SoldOutMessage;
-            if (State == MachineStatus.HAS_QUARTER)
-                return HasQuarterMessage;
-
-            State = MachineStatus.HAS_QUARTER;
-            return InsertedQuarterMessage;
+            return State.InsertedQuarterAction(this);
         }
 
         public string TurnCrank()
         {
-            if (State == MachineStatus.SOLD)
-                return SoldMessage;
-            if (State == MachineStatus.NO_QUARTER)
-                return NoQuarterMessage;
-            if (State == MachineStatus.SOLD_OUT)
-                return SoldOutMessage;
-
-            State = MachineStatus.SOLD;
-            return SoldCorrectMessage;
+            return State.TurnCrankAction(this);
         }
 
         public string Dispense()
         {
-            if (State == MachineStatus.NO_QUARTER)
-                return NoQuarterMessage;
-            if (State == MachineStatus.HAS_QUARTER)
-                return HasQuarterMessage;
-            if (State == MachineStatus.SOLD_OUT)
-                return SoldOutMessage;
-
-            GumballNum--;
-            if (GumballNum == 0)
-            {
-                State = MachineStatus.SOLD_OUT;
-                return NoGumballMessage;
-            }
-
-            State = MachineStatus.NO_QUARTER;
-            return DispenseSucessMessage;
+            return State.DispenseAction(this);
         }
 
         public string EjectQuarter()
         {
-            if (State == MachineStatus.NO_QUARTER)
-                return NoQuarterMessage;
-            if (State == MachineStatus.SOLD_OUT)
-                return SoldOutMessage;
-            if (State == MachineStatus.SOLD)
-                return SoldMessage;
-
-            State = MachineStatus.NO_QUARTER;
-            return EjectSucessMessage;
+            return State.EjectQuarterAction(this);
         }
     }
 

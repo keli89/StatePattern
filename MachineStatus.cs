@@ -36,7 +36,7 @@ namespace StatePattern
                 return SoldMessage;
             if (gumballMachine.State == SOLD_OUT)
                 return SoldOutMessage;
-                return HasQuarterMessage;
+            return HasQuarterMessage;
         }
 
         public virtual string TurnCrankAction(GumballMachine gumballMachine)

@@ -3,7 +3,7 @@
     public class GumballMachine
     {
       
-        public int GumballNum { get;set; }
+        public int GumballNum { get; set;}
 
         public GumballMachine(int gumballNum, MachineStatus machineStatus)
         {

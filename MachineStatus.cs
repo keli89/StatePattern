@@ -5,19 +5,19 @@ namespace StatePattern
     public class MachineStatus
     {
         public const string InsertedQuarterMessage = "InsertedQuarterMessage";
-        private const string SoldOutMessage = "SoldOutMessage";
+        protected const string SoldOutMessage = "SoldOutMessage";
         protected const string SoldMessage = "SoldMessage";
-        private const string SoldCorrectMessage = "SoldCorrectMessage";
-        private const string HasQuarterMessage = "HasQuarterMessage";
+        protected const string SoldCorrectMessage = "SoldCorrectMessage";
+        protected const string HasQuarterMessage = "HasQuarterMessage";
         protected const string NoQuarterMessage = "NoQuarterMessage";
-        private const string NoGumballMessage = "NoGumballMessage";
-        private const string DispenseSucessMessage = "DispenseSucessMessage";
-        private const string EjectSucessMessage = "EjectSucessMessage";
+        protected const string NoGumballMessage = "NoGumballMessage";
+        protected const string DispenseSucessMessage = "DispenseSucessMessage";
+        protected const string EjectSucessMessage = "EjectSucessMessage";
 
         public static MachineStatus NO_QUARTER = new MachineStatusNoQuarter("NO_QUARTER");
-        public static MachineStatus HAS_QUARTER = new MachineStatus("HAS_QUARTER");
-        public static MachineStatus SOLD_OUT = new MachineStatus("SOLD_OUT");
-        public static MachineStatus SOLD = new MachineStatus("SOLD");
+        public static MachineStatus HAS_QUARTER = new MachineStatusHasQuarter("HAS_QUARTER");
+        public static MachineStatus SOLD_OUT = new MachineStatusSoldOut("SOLD_OUT");
+        public static MachineStatus SOLD = new MachineStatusSold("SOLD");
         private readonly String name;
 
         protected MachineStatus(String name)

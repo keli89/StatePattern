@@ -48,10 +48,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="GumballMachine.cs" />
     <Compile Include="GumballMachineFact.cs" />
     <Compile Include="MachineStatus.cs" />
+    <Compile Include="MachineStatusNoQuarter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

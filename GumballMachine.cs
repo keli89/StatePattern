@@ -11,13 +11,14 @@
         private const string NoGumballMessage = "NoGumballMessage";
         private const string DispenseSucessMessage = "DispenseSucessMessage";
         private const string EjectSucessMessage = "EjectSucessMessage";
-        public int GumballNum { get; set; }
 
         public GumballMachine(int gumballNum, MachineStatus machineStatus)
         {
             GumballNum = gumballNum;
             State = machineStatus;
         }
+
+        public int GumballNum { get; set; }
 
         public MachineStatus State { get; set; }
 
@@ -80,6 +81,4 @@
             return EjectSucessMessage;
         }
     }
-
-
 }

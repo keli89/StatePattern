@@ -15,15 +15,15 @@ namespace StatePattern
         private const string DispenseSucessMessage = "DispenseSucessMessage";
         private const string EjectSucessMessage = "EjectSucessMessage";
 
-        private MachineStatus(String name)
-        {
-            this.name = name;
-        }
-
         public static MachineStatus NO_QUARTER = new MachineStatus(" NO_QUARTER");
         public static MachineStatus HAS_QUARTER = new MachineStatus("HAS_QUARTER");
         public static MachineStatus SOLD_OUT = new MachineStatus("SOLD_OUT");
         public static MachineStatus SOLD = new MachineStatus("SOLD");
+
+        private MachineStatus(String name)
+        {
+            this.name = name;
+        }
 
         public String toString()
         {
@@ -40,7 +40,7 @@ namespace StatePattern
                 return HasQuarterMessage;
 
             gumballMachine.State = HAS_QUARTER;
-            return GumballMachine.InsertedQuarterMessage;
+            return InsertedQuarterMessage;
         }
 
         public string TurnCrankAction(GumballMachine gumballMachine)

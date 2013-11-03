@@ -2,15 +2,6 @@
 {
     public class GumballMachine
     {
-        public const string InsertedQuarterMessage = "InsertedQuarterMessage";
-        private const string SoldOutMessage = "SoldOutMessage";
-        private const string SoldMessage = "SoldMessage";
-        private const string SoldCorrectMessage = "SoldCorrectMessage";
-        private const string HasQuarterMessage = "HasQuarterMessage";
-        private const string NoQuarterMessage = "NoQuarterMessage";
-        private const string NoGumballMessage = "NoGumballMessage";
-        private const string DispenseSucessMessage = "DispenseSucessMessage";
-        private const string EjectSucessMessage = "EjectSucessMessage";
         public int GumballNum { get;set; }
 
         public GumballMachine(int gumballNum, MachineStatus machineStatus)

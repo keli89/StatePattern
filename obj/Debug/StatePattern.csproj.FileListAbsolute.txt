@@ -1,0 +1,5 @@
+C:\Users\like\Desktop\StatePattern\bin\Debug\StatePattern.dll
+C:\Users\like\Desktop\StatePattern\bin\Debug\StatePattern.pdb
+C:\Users\like\Desktop\StatePattern\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\like\Desktop\StatePattern\obj\Debug\StatePattern.dll
+C:\Users\like\Desktop\StatePattern\obj\Debug\StatePattern.pdb

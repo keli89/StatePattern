@@ -2,15 +2,15 @@
 {
     public class GumballMachine
     {
-        public int GumballNum { get;set; }
-
         public GumballMachine(int gumballNum, MachineStatus machineStatus)
         {
             GumballNum = gumballNum;
             State = machineStatus;
         }
 
-        public MachineStatus State { get;set; }
+        public int GumballNum { get; set; }
+
+        public MachineStatus State { get; set; }
 
         public string InsertQuarter()
         {
@@ -32,6 +32,4 @@
             return State.EjectQuarterAction(this);
         }
     }
-
-
 }

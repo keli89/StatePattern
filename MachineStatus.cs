@@ -4,7 +4,6 @@ namespace StatePattern
 {
     public class MachineStatus
     {
-        private String name;
         public const string InsertedQuarterMessage = "InsertedQuarterMessage";
         private const string SoldOutMessage = "SoldOutMessage";
         private const string SoldMessage = "SoldMessage";
@@ -19,6 +18,7 @@ namespace StatePattern
         public static MachineStatus HAS_QUARTER = new MachineStatus("HAS_QUARTER");
         public static MachineStatus SOLD_OUT = new MachineStatus("SOLD_OUT");
         public static MachineStatus SOLD = new MachineStatus("SOLD");
+        private readonly String name;
 
         private MachineStatus(String name)
         {
@@ -90,8 +90,3 @@ namespace StatePattern
         }
     }
 }
-
-
-
-
-   

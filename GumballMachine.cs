@@ -11,7 +11,7 @@
         private const string NoGumballMessage = "NoGumballMessage";
         private const string DispenseSucessMessage = "DispenseSucessMessage";
         private const string EjectSucessMessage = "EjectSucessMessage";
-        public int GumballNum { get; private set; }
+        public int GumballNum { get; set; }
 
         public GumballMachine(int gumballNum, MachineStatus machineStatus)
         {
@@ -19,7 +19,7 @@
             State = machineStatus;
         }
 
-        public MachineStatus State { get; private set; }
+        public MachineStatus State { get; set; }
 
         public string InsertQuarter()
         {

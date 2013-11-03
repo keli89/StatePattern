@@ -81,11 +81,5 @@
         }
     }
 
-    public enum MachineStatus
-    {
-        NO_QUARTER = 1,
-        HAS_QUARTER = 2,
-        SOLD_OUT = 3,
-        SOLD
-    }
+
 }

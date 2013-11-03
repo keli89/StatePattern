@@ -2,7 +2,7 @@
 
 namespace StatePattern
 {
-    public class MachineStatus
+    public abstract class MachineStatus
     {
         public const string InsertedQuarterMessage = "InsertedQuarterMessage";
         protected const string SoldOutMessage = "SoldOutMessage";
@@ -30,53 +30,12 @@ namespace StatePattern
             return name;
         }
 
-        public virtual string InsertedQuarterAction(GumballMachine gumballMachine)
-        {
-            if (gumballMachine.State == SOLD)
-                return SoldMessage;
-            if (gumballMachine.State == SOLD_OUT)
-                return SoldOutMessage;
-                return HasQuarterMessage;
-        }
+        public abstract string InsertedQuarterAction(GumballMachine gumballMachine);
 
-        public virtual string TurnCrankAction(GumballMachine gumballMachine)
-        {
-            if (gumballMachine.State == SOLD)
-                return SoldMessage;
-            if (gumballMachine.State == SOLD_OUT)
-                return SoldOutMessage;
+        public abstract string TurnCrankAction(GumballMachine gumballMachine);
 
-            gumballMachine.State = SOLD;
-            return SoldCorrectMessage;
-        }
+        public abstract string DispenseAction(GumballMachine gumballMachine);
 
-        public virtual string DispenseAction(GumballMachine gumballMachine)
-        {
-            if (gumballMachine.State == HAS_QUARTER)
-                return HasQuarterMessage;
-            if (gumballMachine.State == SOLD_OUT)
-                return SoldOutMessage;
-
-            gumballMachine.GumballNum--;
-            if (gumballMachine.GumballNum == 0)
-            {
-                gumballMachine.State = SOLD_OUT;
-                return NoGumballMessage;
-            }
-
-            gumballMachine.State = NO_QUARTER;
-            return DispenseSucessMessage;
-        }
-
-        public virtual string EjectQuarterAction(GumballMachine gumballMachine)
-        {
-            if (gumballMachine.State == SOLD_OUT)
-                return SoldOutMessage;
-            if (gumballMachine.State == SOLD)
-                return SoldMessage;
-
-            gumballMachine.State = NO_QUARTER;
-            return EjectSucessMessage;
-        }
+        public abstract string EjectQuarterAction(GumballMachine gumballMachine);
     }
 }

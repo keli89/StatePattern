@@ -19,7 +19,7 @@
 
         public override string DispenseAction(GumballMachine gumballMachine)
         {
-                return HasQuarterMessage;
+            return HasQuarterMessage;
         }
 
         public override string EjectQuarterAction(GumballMachine gumballMachine)

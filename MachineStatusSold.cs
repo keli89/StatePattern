@@ -8,12 +8,12 @@
 
         public override string InsertedQuarterAction(GumballMachine gumballMachine)
         {
-                return SoldMessage;
+            return SoldMessage;
         }
 
         public override string TurnCrankAction(GumballMachine gumballMachine)
         {
-                return SoldMessage;
+            return SoldMessage;
         }
 
         public override string DispenseAction(GumballMachine gumballMachine)
@@ -31,7 +31,7 @@
 
         public override string EjectQuarterAction(GumballMachine gumballMachine)
         {
-                return SoldMessage;
+            return SoldMessage;
         }
     }
 }

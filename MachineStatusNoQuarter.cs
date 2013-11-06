@@ -2,7 +2,7 @@
 {
     public class MachineStatusNoQuarter : MachineStatus
     {
-        public MachineStatusNoQuarter(string name) : base(name)
+        public MachineStatusNoQuarter(string name) : base()
         {
         }
 

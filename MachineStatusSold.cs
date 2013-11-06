@@ -2,7 +2,7 @@
 {
     public class MachineStatusSold : MachineStatus
     {
-        public MachineStatusSold(string name) : base(name)
+        public MachineStatusSold(string name) : base()
         {
         }
 

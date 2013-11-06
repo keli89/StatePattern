@@ -4,7 +4,7 @@ namespace StatePattern
 {
     public abstract class MachineStatus
     {
-        public const string InsertedQuarterMessage = "InsertedQuarterMessage";
+        protected const string InsertedQuarterMessage = "InsertedQuarterMessage";
         protected const string SoldOutMessage = "SoldOutMessage";
         protected const string SoldMessage = "SoldMessage";
         protected const string SoldCorrectMessage = "SoldCorrectMessage";

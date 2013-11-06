@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MachineMessageSugar.cs" />
     <Compile Include="MachineStatusSoldOut.cs" />
     <Compile Include="MachineStatusSold.cs" />
     <Compile Include="MachineStatusHasQuarter.cs" />

@@ -9,22 +9,22 @@
         public override string InsertedQuarterAction(GumballMachine gumballMachine)
         {
             gumballMachine.State = HAS_QUARTER;
-            return InsertedQuarterMessage;
+            return MachineMessageSugar.InsertedQuarterMessage;
         }
 
         public override string TurnCrankAction(GumballMachine gumballMachine)
         {
-            return NoQuarterMessage;
+            return MachineMessageSugar.NoQuarterMessage;
         }
 
         public override string DispenseAction(GumballMachine gumballMachine)
         {
-            return NoQuarterMessage;
+            return MachineMessageSugar.NoQuarterMessage;
         }
 
         public override string EjectQuarterAction(GumballMachine gumballMachine)
         {
-            return NoQuarterMessage;
+            return MachineMessageSugar.NoQuarterMessage;
         }
     }
 }

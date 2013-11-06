@@ -8,12 +8,12 @@
 
         public override string InsertedQuarterAction(GumballMachine gumballMachine)
         {
-            return SoldMessage;
+            return MachineMessageSugar.SoldMessage;
         }
 
         public override string TurnCrankAction(GumballMachine gumballMachine)
         {
-            return SoldMessage;
+            return MachineMessageSugar.SoldMessage;
         }
 
         public override string DispenseAction(GumballMachine gumballMachine)
@@ -22,16 +22,16 @@
             if (gumballMachine.GumballNum == 0)
             {
                 gumballMachine.State = SOLD_OUT;
-                return NoGumballMessage;
+                return MachineMessageSugar.NoGumballMessage;
             }
 
             gumballMachine.State = NO_QUARTER;
-            return DispenseSucessMessage;
+            return MachineMessageSugar.DispenseSucessMessage;
         }
 
         public override string EjectQuarterAction(GumballMachine gumballMachine)
         {
-            return SoldMessage;
+            return MachineMessageSugar.SoldMessage;
         }
     }
 }
